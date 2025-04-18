@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel - SsS Diamond Shop</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #111; color: #fff; margin: 0; padding: 20px; }
+    h1 { text-align: center; }
+    .section { background: #1e1e1e; padding: 20px; border-radius: 10px; margin-bottom: 20px; }
+    label, input, select, button { display: block; margin: 10px 0; }
+    input, select, button { padding: 8px; width: 100%; max-width: 400px; }
+    table { width: 100%; margin-top: 20px; border-collapse: collapse; }
+    th, td { border: 1px solid #333; padding: 10px; text-align: center; }
+    th { background: #222; }
+    button { background: #00c896; color: white; border: none; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>🔐 Admin Panel</h1>
+
+  <div class="section">
+    <h2>➕ Add Order</h2>
+    <label>UID:</label>
+    <input type="text" id="uid" placeholder="FF UID">
+
+    <label>Item:</label>
+    <input type="text" id="item" placeholder="Diamond / Monthly / Weekly">
+
+    <label>Status:</label>
+    <select id="status">
+      <option>Pending</option>
+      <option>Complete</option>
+    </select>
+
+    <button onclick="addOrder()">Add Order</button>
+  </div>
+
+  <div class="section">
+    <h2>📋 Order List</h2>
+    <table id="orderTable">
+      <thead>
+        <tr>
+          <th>UID</th>
+          <th>Item</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script>
+    let orders = JSON.parse(localStorage.getItem('orders')) || [];
+
+    function saveOrders() {
+      localStorage.setItem('orders', JSON.stringify(orders));
+    }
+
+    function renderOrders() {
+      const tbody = document.querySelector("#orderTable tbody");
+      tbody.innerHTML = "";
+      orders.forEach((order, index) => {
+        const row = `<tr>
+          <td>${order.uid}</td>
+          <td>${order.item}</td>
+          <td>${order.status}</td>
+          <td>
+            <button onclick="toggleStatus(${index})">Toggle</button>
+            <button onclick="deleteOrder(${index})">Delete</button>
+          </td>
+        </tr>`;
+        tbody.innerHTML += row;
+      });
+    }
+
+    function addOrder() {
+      const uid = document.getElementById('uid').value;
+      const item = document.getElementById('item').value;
+      const status = document.getElementById('status').value;
+      if (!uid || !item) return alert("সব তথ্য পূরণ করুন");
+      orders.push({ uid, item, status });
+      saveOrders();
+      renderOrders();
+      document.getElementById('uid').value = "";
+      document.getElementById('item').value = "";
+    }
+
+    function deleteOrder(index) {
+      if (confirm("আপনি কি এই অর্ডারটি মুছতে চান?")) {
+        orders.splice(index, 1);
+        saveOrders();
+        renderOrders();
+      }
+    }
+
+    function toggleStatus(index) {
+      orders[index].status = orders[index].status === "Pending" ? "Complete" : "Pending";
+      saveOrders();
+      renderOrders();
+    }
+
+    renderOrders();
+  </script>
+</body>
+</html>
