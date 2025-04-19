@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>FF Diamond Top-Up</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background: #f7f7f7; }
+    h2 { color: #1e90ff; }
+    form { background: white; padding: 20px; border-radius: 10px; margin-bottom: 30px; box-shadow: 0 0 10px #ccc; }
+    select, input, button { width: 100%; padding: 10px; margin-top: 10px; margin-bottom: 20px; border-radius: 5px; border: 1px solid #ccc; }
+    button { background-color: #28a745; color: white; font-weight: bold; border: none; cursor: pointer; }
+    button:hover { background-color: #218838; }
+  </style>
+</head>
+<body>
+
+  <h1>💎 SsS Diamond Shop</h1>
+
+  <!-- FF UID TOPUP -->
+  <form>
+    <h2>🔥 FF UID TOPUP</h2>
+    <input type="text" placeholder="FF UID লিখুন" required>
+    <select required>
+      <option value="">-- প্যাকেজ সিলেক্ট করুন --</option>
+      <option>25 Diamond - 25 TK</option>
+      <option>50 Diamond - 45 TK</option>
+      <option>115 Diamond - 82 TK</option>
+      <option>240 Diamond - 165 TK</option>
+      <option>355 Diamond - 245 TK</option>
+      <option>480 Diamond - 320 TK</option>
+      <option>610 Diamond - 403 TK</option>
+      <option>850 Diamond - 562 TK</option>
+      <option>1240 Diamond - 806 TK</option>
+      <option>2530 Diamond - 1607 TK</option>
+      <option>5060 Diamond - 3198 TK</option>
+      <option>Monthly - 770 TK</option>
+      <option>Weekly - 168 TK</option>
+      <option>Level Up Pass - 169 TK</option>
+    </select>
+    <button type="submit">Top-Up Now</button>
+  </form>
+
+  <!-- UNIPIN VOUCHER BD -->
+  <form>
+    <h2>🧧 UNIPIN VOUCHER BD</h2>
+    <select required>
+      <option value="">-- কোড প্যাকেজ সিলেক্ট করুন --</option>
+      <option>25 Diamond Code - 24 TK</option>
+      <option>50 Diamond Code - 43 TK</option>
+      <option>115 Diamond Code - 80 TK</option>
+      <option>240 Diamond Code - 163 TK</option>
+      <option>610 Diamond Code - 401 TK</option>
+      <option>1240 Diamond Code - 803 TK</option>
+      <option>2530 Diamond Code - 1603 TK</option>
+      <option>Level Up Pass Code - 167 TK</option>
+      <option>Weekly Code - 166 TK</option>
+      <option>Monthly Code - 767 TK</option>
+    </select>
+    <button type="submit">Buy Code</button>
+  </form>
+
+  <!-- WEEKLY / MONTHLY -->
+  <form>
+    <h2>📅 WEEKLY / MONTHLY</h2>
+    <select required>
+      <option value="">-- বেছে নিন --</option>
+      <option>Weekly - 167 TK</option>
+      <option>Monthly - 770 TK</option>
+      <option>2X Weekly - 334 TK</option>
+      <option>3X Weekly - 501 TK</option>
+      <option>2X Monthly - 1540 TK</option>
+      <option>1Weekly + 1Monthly - 937 TK</option>
+      <option>3Weekly + 1Monthly - 1271 TK</option>
+    </select>
+    <button type="submit">Buy Package</button>
+  </form>
+
+  <!-- EVO ACCESS -->
+  <form>
+    <h2>⚔️ EVO ACCESS</h2>
+    <select required>
+      <option value="">-- টাইম প্যাকেজ বেছে নিন --</option>
+      <option>3 Days Evo Access - 76 TK</option>
+      <option>7 Days Evo Access - 117 TK</option>
+      <option>30 Days Evo Access - 320 TK</option>
+    </select>
+    <button type="submit">Buy Access</button>
+  </form>
+
+  <hr>
+  <p><strong>💳 Nagad Payment Number:</strong> 01310659446</p>
+  <p>📞 WhatsApp: <a href="https://wa.me/+8801310659446">wa.me/+8801310659446</a></p>
+  <p>📨 Telegram: <a href="https://t.me/samratboy8/45">t.me/samratboy8/45</a></p>
+
+</body>
+</html>
