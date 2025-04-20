@@ -1,0 +1,15 @@
+<form action="your_payment_gateway_script.php" method="POST">
+  <label for="unipin">UNIPIN VOUCHER:</label>
+  <input type="radio" name="package" value="unipin">Unipin<br>
+
+  <label for="evo">EVO ACCESS:</label>
+  <input type="radio" name="package" value="evo">Evo Access<br>
+
+  <label for="weekly">Weekly Package:</label>
+  <input type="radio" name="package" value="weekly">Weekly<br>
+
+  <label for="monthly">Monthly Package:</label>
+  <input type="radio" name="package" value="monthly">Monthly<br>
+
+  <input type="submit" value="Submit">
+</form>
