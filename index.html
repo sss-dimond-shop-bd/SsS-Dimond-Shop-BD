@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SsS Diamond Shop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="logo.jpg" alt="Logo" class="logo" />
+    <nav>
+      <ul>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="#ff-topup">FF UID TOPUP</a></li>
+        <li><a href="#unipin">UNIPIN VOUCHER BD</a></li>
+        <li><a href="#weekly">WEEKLY/MONTHLY</a></li>
+        <li><a href="#evo">EVO ACCESS</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="ff-topup">
+      <h2>FF UID TOPUP</h2>
+      <form id="ffForm">
+        <input type="text" placeholder="Enter UID" name="uid" required />
+        <select name="package">
+          <option value="25 Diamond - 25 TK">25 Diamond - 25 TK</option>
+          <option value="50 Diamond - 45 TK">50 Diamond - 45 TK</option>
+          <option value="115 Diamond - 82 TK">115 Diamond - 82 TK</option>
+          <option value="240 Diamond - 165 TK">240 Diamond - 165 TK</option>
+        </select>
+        <input type="text" placeholder="Nagad TRX ID" name="trx" required />
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <!-- Other sections will go here similarly -->
+  </main>
+
+  <footer>
+    <p>© 2025 SsS Diamond Shop</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

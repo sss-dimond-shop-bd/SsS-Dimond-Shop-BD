@@ -1,0 +1,42 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background: #111;
+  color: white;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+.logo {
+  width: 50px;
+  height: auto;
+  margin-right: 15px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+}
+form {
+  margin: 20px 0;
+}
+form input, form select {
+  padding: 10px;
+  margin: 5px;
+  width: 200px;
+}
+form button {
+  padding: 10px 15px;
+  background: green;
+  color: white;
+  border: none;
+}
