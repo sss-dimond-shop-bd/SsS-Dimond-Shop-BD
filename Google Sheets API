@@ -1,0 +1,26 @@
+const {google} = require('googleapis');
+const sheets = google.sheets('v4');
+
+// Authenticate with Google API
+const authClient = await google.auth.getClient({
+  scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+});
+
+const spreadsheetId = 'your-google-sheet-id';
+const range = 'Sheet1!A1:D1';
+const values = [
+  ['Transaction ID', 'User ID', 'Package', 'Payment Status'],
+  ['123456', 'user_001', 'Unipin', 'Pending']
+];
+
+const resource = {
+  values,
+};
+
+await sheets.spreadsheets.values.update({
+  auth: authClient,
+  spreadsheetId,
+  range,
+  valueInputOption: 'RAW',
+  resource,
+});
