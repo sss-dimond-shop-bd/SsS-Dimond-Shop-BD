@@ -1,0 +1,6 @@
+<div id="confirmation">
+  <h2>Your Payment was Successful!</h2>
+  <p>Transaction ID: 123456</p>
+  <p>Amount: 500 BDT</p>
+  <p>Status: Successful</p>
+</div>
